@@ -8,6 +8,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.vim
 ln -s ${dotfiles}/.vim/*.sh .
+git init
 
 # Link other vim-related dotfiles.
 cd ~

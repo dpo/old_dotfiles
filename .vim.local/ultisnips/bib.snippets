@@ -1,0 +1,258 @@
+# UltiSnips definitions for BibTeX files.
+
+# List of UltiSnips trigger words:
+#  art inproc incoll inbook proc book booklet phd master
+#  report manual unpub misc string preamble
+
+snippet art "Article in journal" b
+@Article{${1:author}-${2:year},
+	author = {$1},
+	title = {$3},
+	journal = {$4},
+	year = {$2},
+	OPTdoi = {},
+	OPTkey = {},
+	OPTvolume = {},
+	OPTnumber = {},
+	OPTpages = {},
+	OPTmonth = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet inproc "Article in conference proceedings" b
+@InProceedings{${1:author}-${2:year},
+	author = {$1},
+	title = {$3},
+	OPTcrossref = {},
+	OPTkey = {},
+	OPTbooktitle = {},
+	OPTpages = {},
+	OPTyear = {$2},
+	OPTeditor = {},
+	OPTvolume = {},
+	OPTnumber = {},
+	OPTseries = {},
+	OPTaddress = {},
+	OPTdoi = {},
+	OPTmonth = {},
+	OPTorganization = {},
+	OPTpublisher = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet incoll "Article in a collection" b
+@InCollection{${1:author}-${2:year},
+	author = {$1},
+	title = {$3},
+	booktitle = {$4},
+	OPTcrossref = {},
+	OPTkey = {},
+	OPTpages = {},
+	OPTpublisher = {},
+	OPTyear = {$2},
+	OPTeditor = {},
+	OPTvolume = {},
+	OPTnumber = {},
+	OPTseries = {},
+	OPTtype = {},
+	OPTchapter = {},
+	OPTaddress = {},
+	OPTedition = {},
+	OPTdoi = {},
+	OPTmonth = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet inbook "Chapter or pages in a book" b
+@InBook{${1:author}-${2:year},
+	ALTauthor = {$1},
+	ALTeditor = {},
+	title = {$3},
+	chapter = {$4},
+	publisher = {$5},
+	year = {$2},
+	OPTkey = {},
+	OPTvolume = {},
+	OPTnumber = {},
+	OPTseries = {},
+	OPTtype = {},
+	OPTaddress = {},
+	OPTedition = {},
+	OPTdoi = {},
+	OPTmonth = {},
+	OPTpages = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet proc "Conference proceedings" b
+@Proceedings{${1:editor}-${2:year},
+	editor = {$1},
+	title = {$3},
+	year = {$2},
+	OPTkey = {},
+	OPTbooktitle = {},
+	OPTvolume = {},
+	OPTnumber = {},
+	OPTseries = {},
+	OPTaddress = {},
+	OPTmonth = {},
+	OPTorganization = {},
+	OPTpublisher = {},
+	OPTdoi = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet book "Book" b
+@Book{${1:author}-${2:year},
+	ALTauthor = {$1},
+	ALTeditor = {},
+	title = {$3},
+	publisher = {$4},
+	year = {$2},
+	OPTkey = {},
+	OPTvolume = {},
+	OPTnumber = {},
+	OPTseries = {},
+	OPTaddress = {},
+	OPTedition = {},
+	OPTdoi = {},
+	OPTmonth = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet booklet "Booklet" b
+@Booklet{${1:author}-${2:year},
+	title = {$3},
+	year = {$2},
+	OPTkey = {},
+	OPTauthor = {$1},
+	OPThowpublished = {},
+	OPTaddress = {},
+	OPTdoi = {},
+	OPTmonth = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet phd "Ph.D. Thesis" b
+@PhdThesis{${1:author}-${2:year},
+	author = {$1},
+	title = {$3},
+	school = {$4},
+	year = {$2},
+	OPTkey = {},
+	OPTtype = {},
+	OPTaddress = {},
+	OPTdoi = {},
+	OPTmonth = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet master "Master's Thesis" b
+@MastersThesis{${1:author}-${2:year},
+	author = {$1},
+	title = {$3},
+	school = {$4},
+	year = {$2},
+	OPTkey = {},
+	OPTtype = {},
+	OPTaddress = {},
+	OPTdoi = {},
+	OPTmonth = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet report "Technical Report" b
+@TechReport{${1:author}-${2:year},
+	author = {$1},
+	title = {$3},
+	institution = {$4},
+	year = {$2},
+	OPTkey = {},
+	OPTtype = {},
+	OPTnumber = {},
+	OPTaddress = {},
+	OPTmonth = {},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet cahier "Cahier du GERAD" b
+@TechReport{${1:author}-${2:year},
+	author = {$1},
+	title = {$3},
+	institution = {GERAD},
+	year = {$2},
+	type = {Cahier du GERAD},
+	number = {G-$2-$4},
+	address = {Montr\'eal, QC, Canada},
+}
+endsnippet
+
+snippet manual "Technical Manual" b
+@Manual{${1:author}-${2:year},
+	title = {$1},
+	OPTkey = {},
+	OPTauthor = {},
+	OPTorganization = {},
+	OPTaddress = {},
+	OPTedition = {},
+	OPTmonth = {},
+	OPTyear = {$2},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet unpub "Unpublished" b
+@Unpublished{${1:author}-${2:year},
+	author = {$1},
+	year = {$2},
+	title = {$3},
+	note = {$4},
+	OPTkey = {},
+	OPTmonth = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet misc "Miscellaneous" b
+@Misc{${1:author}-${2:year},
+	OPTkey = {},
+	OPTauthor = {$1},
+	OPTtitle = {},
+	OPThowpublished = {},
+	OPTmonth = {},
+	OPTURL = {},
+	OPTyear = {$2},
+	OPTnote = {},
+	OPTannote = {}
+}
+endsnippet
+
+snippet string "String" b
+@String{${1:str} = {2:long string}}
+endsnippet
+
+snippet preamble "Preamble" b
+@Preamble{{${1:message}}}
+endsnippet
+

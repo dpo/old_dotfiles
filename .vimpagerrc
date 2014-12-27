@@ -1,0 +1,5 @@
+" See https://github.com/rkitover/vimpager
+set noloadplugins                 " No need for plugins.
+let vimpager_disable_x11 = 1      " Faster startup: no X11 connection.
+let vimpager_scrolloff = 5
+let vimpager_disable_ansiesc = 1  " Use Vim highlighting.

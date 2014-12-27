@@ -1,0 +1,24 @@
+so \ensuremath{\sim}\slash .vim.local\slash code.vim
+
+``compiler md
+''set makeprg=md2pdf\textbackslash{} \%\textbackslash{} -o\textbackslash{} \%$<$.pdf
+set makeprg=mmd2pdf\textbackslash{} \%\textbackslash{} -o\textbackslash{} \%$<$.pdf
+`` Skim doesn't seem to be watching the PDF file for changes{\ldots} Why???
+let openpdfname = ''!open `` . expand(''\%:t:r``) . ''.pdf"
+map  :silent execute openpdfname:redraw!
+map  :silent make!:redraw!
+
+\begin{description}
+
+\item[" Preview Markdown in Marked.]
+
+nnoremap m :silent !open -a Marked\textbackslash{} 2.app `\%:p':redraw!
+
+\item[" Preview Markdown in browser.]
+
+nnoremap M :\%w !pbcopy:silent !\slash Users\slash dpo\slash bin\slash md-preview-browser.sh:redraw!
+
+nnoremap C :\%w !pbcopy:silent !\slash Users\slash dpo\slash bin\slash critic-preview-browser.sh:redraw!
+\end{description}
+
+set textwidth=79
